@@ -1,0 +1,11 @@
+.text-white {
+    color: white;
+  }
+  .text-sm {
+    font-size: small;
+  }
+  .city {
+    color: white;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', lora;
+  }

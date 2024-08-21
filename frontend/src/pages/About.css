@@ -1,0 +1,247 @@
+/* This rule imports the Rubik font from Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+
+
+/* :root { ... } :a pseudo-class (or pseudo element??)This selector sets the global CSS variables,  */
+/* which can be used throughout the document to define consistent colors, sizes, and other properties. */
+/* --pink is a CSS variable defined on the root element.  */
+/* It can then be used anywhere within the stylesheet by referencing it using the var() function. */
+:root{
+    
+   --black:#333;
+   --white:#fff;
+   --light-color:#666;
+   --light-white:#ccc;
+   --light-bg:#f5f5f5;
+   --border:.1rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --orange:#f39c12;
+}
+
+*{   /* applies styles to all elements (*) */
+    font-family: 'Rubik', sans-serif;
+    
+    
+    
+    
+    margin:0; padding:0;/* removes default margins and paddings */
+    
+    /* Margin is the space outside the border of an element. */
+    /* It creates space between the element and adjacent elements. */
+    /* Margins do not have a background color, and any background applied to the element will not extend into the margin area. */
+    
+    /* Padding is the space between the content of an element and its border. */
+    /* It creates space inside the element, separating the content from the border. */
+    /* Padding is part of the element's background, so any background applied to the element will also appear within the padding area. */
+    
+    
+    
+    
+    box-sizing: border-box;
+ 
+    /* box-sizing: border-box; ensures that padding and border are included in the total width and height of an element, making layout calculations more predictable and consistent. */
+    
+    outline: none; border:none;
+    text-decoration: none;
+ 
+    transition:all .2s linear;
+ 
+    /* transition: all .2s linear; sets up a transition effect for all properties of an element over a duration of 0.2 seconds, using a linear timing function. */
+    /* when an element's properties change (e.g., its size, color, position), the transition effect will smoothly animate those changes over a duration of 0.2 seconds using a constant speed. */
+ }
+  
+*::selection{
+    background-color:cornflowerblue;
+    color:var(--white);
+ }
+
+ html{
+   
+  /* font-size: 62.5%; */
+   overflow-x: hidden;
+   /* overflow-x: hidden;: This rule hides the horizontal scrollbar of the HTML document. It prevents horizontal scrolling and ensures that any content overflowing the viewport horizontally will be hidden. */
+   
+   scroll-behavior: smooth;
+   scroll-padding-top: 6.5rem;
+}
+
+body{
+   background: var(--light-bg);
+}
+
+section{
+   padding:3rem 2rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: inline-block;
+   border-radius: .5rem;
+   margin-top: 1rem;
+   font-size: 1rem;
+   color:var(--white);
+   cursor: pointer;
+   padding:1rem 1rem;
+   text-transform: capitalize;
+}
+
+.btn{
+   background-color:cadetblue;
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+    background-color: var(--black);
+}
+
+.empty{
+   padding:1.5rem;
+   font-size: 2rem;
+   color:var(--red);
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   background-color: var(--white);
+   border-radius: .5rem;
+   text-transform: capitalize;
+}
+ 
+.heading{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    /* background-color: var(--black); */
+    text-align: center;
+    min-height: 20vh;
+  }
+  
+  .heading h3{
+    font-size: 1.5rem;
+    color:var(--black);
+    text-transform: uppercase;
+    font-weight: bold; /* Add this line to make the font bold */
+  }
+  
+  .heading p{
+    font-size: 1rem;
+    color:var(--black);
+  }
+  
+  .heading p link{
+    color:var(--pink);
+  }
+  
+  .heading p link:hover{
+    text-decoration: underline;
+  }
+  .title{
+    text-align: center;
+    margin-bottom: 2rem;
+    color:var(--black);
+    text-transform: uppercase;
+    font-size: 3rem;
+ }
+  
+ .about .flex{
+    max-width: 1000px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap:1rem;
+ }
+ 
+ .about .flex .image{
+    flex:1 1 40Srem;
+ }
+ 
+ .about .flex .image img{
+   width: 100%; /* Set the width to 100% to make the image fill its container */
+   height: auto; /* Let the height adjust automatically to maintain the aspect ratio */
+   max-width: 100%; /* Ensure the image does not exceed its original size */
+   max-height: 100%; /* Ensure the image does not exceed its original size */
+ }
+ 
+ .about .flex .content{
+    flex:1 1 40rem;
+    text-align: center;
+ }
+ 
+ .about .flex .content h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:var(--black);
+ }
+ 
+ .about .flex .content p{
+    padding:1rem 0;
+    font-size: 1rem;
+    color:var(--light-color);
+    line-height: 2;
+ }
+ 
+ .about .flex:nth-child(2){
+    margin:3rem auto;
+    flex-wrap: wrap-reverse;
+ }
+ 
+ .reviews .box-container{
+    max-width: 1000px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+ }
+ 
+ .reviews .box-container .box{
+    padding:2rem;
+    text-align: center;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+ }
+ 
+ .reviews .box-container .box img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+ }
+ 
+ .reviews .box-container .box p{
+   
+    padding:1rem 0;
+    font-size: 1rem;
+    color:var(--light-color);
+    line-height: 2;
+ }
+ 
+ .reviews .box-container .box .stars{
+    display: inline-block;
+    background: var(--light-bg);
+    border-radius: .5rem;
+    padding:0.5rem 1rem;
+    border:var(--border);
+ }
+ 
+ .reviews .box-container .box .stars i{
+    color:var(--orange);
+    font-size: 1rem;
+    margin:0 .3rem;
+ }
+ 
+ .reviews .box-container .box h3{
+    font-size: 1rem;
+    color:var(--black);
+    margin-top: 1rem;
+ }
+ 

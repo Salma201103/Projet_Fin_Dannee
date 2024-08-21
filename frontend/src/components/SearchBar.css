@@ -1,0 +1,49 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap between elements */
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  margin-right: 5px;
+}
+
+.search-input,
+.count-input,
+.date-picker,
+.date-picker-wrapper,
+.search-button,
+.clear-button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .search-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .form-row {
+    flex: 1;
+  }
+  
+  .search-input {
+    flex: 3; /* Adjust the width distribution */
+  }
+  
+  .count-input,
+  .date-picker,
+  .date-picker-wrapper {
+    flex: 1; /* Adjust the width distribution */
+  }
+  
+  .search-button,
+  .clear-button {
+    flex: 1; /* Adjust the width distribution */
+  }
+}
